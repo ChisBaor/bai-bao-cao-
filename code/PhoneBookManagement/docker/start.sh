@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+
 set -euo pipefail
 
 export DISPLAY=:99
@@ -6,9 +6,6 @@ export XDG_RUNTIME_DIR=/tmp/phonebook-runtime
 mkdir -p "$XDG_RUNTIME_DIR"
 chmod 700 "$XDG_RUNTIME_DIR"
 
-# An Xvfb restart may leave a lock and Unix socket in this container.
-# Only one X display is used here, and the previous processes have stopped
-# before this startup script is run again.
 rm -f /tmp/.X99-lock /tmp/.X11-unix/X99
 
 Xvfb :99 -screen 0 460x990x24 -nolisten tcp &
