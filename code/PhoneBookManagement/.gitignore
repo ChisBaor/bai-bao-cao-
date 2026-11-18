@@ -1,0 +1,22 @@
+# CMake / Qt Creator
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.user
+*.user.*
+.qt/
+*.exe
+*.dll
+*.o
+*.obj
+*.pdb
+# Database / secrets
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.env
+.env
+.DS_Store
